@@ -14,12 +14,12 @@ const NewBookForm = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Título del libro" value={title} onChange={(e) => setTitle(e.target.value)} />
+      <input type="text" placeholder="Tittle" value={title} onChange={(e) => setTitle(e.target.value)} />
 
       {/* Cambia el placeholder y el estado correspondiente a 'author' */}
-      <input type="text" placeholder="Autor del libro" value={author} onChange={(e) => setAuthor(e.target.value)} />
+      <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
 
-      <button type="submit">Añadir libro</button>
+      <button type="submit">Add Book</button>
     </form>
   );
 };
