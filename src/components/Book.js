@@ -7,7 +7,7 @@ const Book = ({ title, author, onDelete }) => (
   <div>
     <h2>{title}</h2>
     <h3>{author}</h3>
-    <button onClick={onDelete} type="button">Eliminar libro</button>
+    <button onClick={onDelete} type="button">Erase Book</button>
   </div>
 );
 
