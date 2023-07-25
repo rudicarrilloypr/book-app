@@ -1,7 +1,6 @@
 // En src/components/BookList.js
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { nanoid } from 'nanoid';
 import Book from './Book';
 import { removeBook } from '../redux/books/booksSlice';

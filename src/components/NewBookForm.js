@@ -1,7 +1,6 @@
 // En src/components/NewBookForm.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { nanoid } from 'nanoid';
 import { addBook } from '../redux/books/booksSlice';
 
