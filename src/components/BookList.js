@@ -1,9 +1,7 @@
-/* eslint-disable react/prop-types */
-// En src/components/BookList.js
 import React from 'react';
+import PropTypes from 'prop-types';
 import Book from './Book';
 
-// eslint-disable-next-line react/prop-types
 const BookList = ({ books, onDelete }) => (
   <div>
     {books.map((book) => (
@@ -17,5 +15,14 @@ const BookList = ({ books, onDelete }) => (
     ))}
   </div>
 );
+
+BookList.propTypes = {
+  books: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
+  })).isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
 
 export default BookList;

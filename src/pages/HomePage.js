@@ -8,9 +8,8 @@ import NewBookForm from '../components/NewBookForm';
 const HomePage = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
-  const appId = 'IlTA9iE7qJQuYgFTFs06'; // Asegurate de usar el ID correcto aquí
+  const appId = 'IlTA9iE7qJQuYgFTFs06';
 
-  // Ahora fetchBooks se llama dentro de un useEffect
   useEffect(() => {
     if (appId) {
       dispatch(fetchBooks(appId));

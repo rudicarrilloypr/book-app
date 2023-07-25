@@ -17,16 +17,9 @@ const Index = () => {
           const newAppId = response.data;
           localStorage.setItem('app_id', newAppId);
           setAppId(newAppId);
-          // eslint-disable-next-line no-console
-          console.log('App ID obtenido y guardado:', newAppId);
         })
         .catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log('Error al obtener app_id', error);
         });
-    } else {
-      // eslint-disable-next-line no-console
-      console.log('App ID obtenido del localStorage:', appId);
     }
   }, [appId]);
 
