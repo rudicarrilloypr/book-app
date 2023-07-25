@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import CategoriesPage from './pages/CategoriesPage';
-import Navigation from './components/Navigation'; // Asegúrate de importar Navigation
+import Navigation from './components/Navigation';
 
 const App = () => (
   <Router>
