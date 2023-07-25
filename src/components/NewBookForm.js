@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { nanoid } from 'nanoid'; // Para generar IDs únicos
+import { nanoid } from 'nanoid';
 import { addBook } from '../redux/books/booksSlice';
 
 const NewBookForm = () => {
@@ -17,7 +17,7 @@ const NewBookForm = () => {
         item_id: nanoid(),
         title,
         author,
-        category: 'Unknown Category', // Puedes reemplazar esto si tienes una categoría en la UI
+        category: 'Unknown Category',
       }));
     }
   };

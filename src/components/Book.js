@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
 
-const Book = ({ title, author, id }) => { // Utiliza 'id' en lugar de 'item_id'
+const Book = ({ title, author, id }) => {
   const dispatch = useDispatch();
   const onDelete = () => {
     dispatch(removeBook(id));
@@ -23,7 +23,7 @@ const Book = ({ title, author, id }) => { // Utiliza 'id' en lugar de 'item_id'
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired, // Aquí también, usa 'id' en lugar de 'item_id'
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;
