@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addBook, removeBook } from '../redux/books/booksSlice';
 import BookList from '../components/BookList';
 import NewBookForm from '../components/NewBookForm';
 
 const HomePage = () => {
-  const [books, setBooks] = useState([]);
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books);
 
   const handleAddBook = (book) => {
-    setBooks((prevBooks) => [...prevBooks, { id: Date.now(), ...book }]);
+    dispatch(addBook(book));
   };
 
   const handleDeleteBook = (id) => {
-    setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
+    dispatch(removeBook(id));
   };
 
   return (

@@ -1,15 +1,25 @@
 // En src/components/NewBookForm.js
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid'; // Para generar IDs únicos
+import { addBook } from '../redux/books/booksSlice';
 
-const NewBookForm = ({ onSubmit }) => {
+const NewBookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ title, author });
+    if (title && author) {
+      dispatch(addBook({
+        item_id: nanoid(),
+        title,
+        author,
+        category: 'Unknown Category', // Puedes reemplazar esto si tienes una categoría en la UI
+      }));
+    }
   };
 
   return (
@@ -22,10 +32,6 @@ const NewBookForm = ({ onSubmit }) => {
       <button type="submit">Add Book</button>
     </form>
   );
-};
-
-NewBookForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
 };
 
 export default NewBookForm;
