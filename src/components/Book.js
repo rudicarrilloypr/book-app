@@ -21,7 +21,7 @@ const Book = ({
       </div>
       <div className="book-progress">
         <div className="progress-bar-container">
-          <Circle percent="75" strokeWidth="5" strokeColor="#0290ff" className="progress-bar" />
+          <Circle percent="75" strokeWidth="9" strokeColor="#0290ff" className="progress-bar" />
           <p className="current-porcentage-number">75%</p>
           <p className="current-completed">COMPLETED</p>
         </div>

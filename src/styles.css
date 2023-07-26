@@ -110,7 +110,7 @@ body {
 .form-content {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0 1.625rem 1.688rem;
+  padding: 1rem 0 1.625rem 1.688rem;
   width: 100%;
 }
 
@@ -181,6 +181,8 @@ form {
   font-size: small;
   font-family: 'Montserrat-Bold', sans-serif;
   margin-top: -0.01rem;
+  color: #121212;
+  opacity: 50%;
 }
 
 .book-content {
@@ -213,11 +215,13 @@ form {
 }
 
 .book-title-label {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Slab:wght@700&display=swap');
+
   width: 12.313rem;
   height: 1.813rem;
   margin: -0.188rem 20.188rem 0 0;
   margin-bottom: 1.9rem;
-  font-family: 'RobotoSlab-bold', sans-serif;
+  font-family: 'Roboto Slab 700', serif !important;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -247,7 +251,7 @@ form {
   width: 3.375rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
-  font-family: 'RobotoSlab-light', sans-serif;
+  font-family: 'Roboto Slab', serif !important;
   font-size: 0.875rem;
   font-weight: 300;
   border: none; /* Agregado */
@@ -259,7 +263,7 @@ form {
 .comments-button,
 .edit-button {
   margin-bottom: 500px;
-  font-family: 'RobotoSlab-light', sans-serif;
+  font-family: 'Roboto Slab', serif !important;
   border: none; /* Agregado */
   background-color: transparent; /* Agregado */
   color: #4386bf;
@@ -287,15 +291,16 @@ span {
 
 .current-chapter {
   opacity: 0.5;
-  font-family: 'RobotoSlab-Light', sans-serif;
+  font-family: 'Roboto Slab', serif !important;
   letter-spacing: normal;
 }
 
 .current-chapter-number {
   opacity: 100%;
-  font-family: 'RobotoSlab-light', sans-serif;
+  font-family: 'Roboto Slab 700', serif !important;
   position: relative;
   bottom: -9%;
+  color: #121212;
 }
 
 .current-chapter,
@@ -312,7 +317,7 @@ span {
   border: none;
   color: white;
   height: 2.063rem;
-  width: 65%;
+  width: 50%;
   border-radius: 3px;
   font-size: 0.75rem;
   text-align: center;
@@ -328,6 +333,11 @@ span {
   width: 50px; /* Adjust as needed */
   height: 50px; /* Adjust as needed */
   margin: 3rem 35.8rem 3.37rem  7.9rem;
+}
+
+.progress-bar {
+  width: 60px;
+  height: 60px;
 }
 
 .current-porcentage-number {
