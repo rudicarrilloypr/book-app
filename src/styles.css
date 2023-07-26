@@ -22,7 +22,7 @@ body {
 
 .navbar-icon {
   display: flex;
-  align-items: center;  /* Alinea el ícono verticalmente */
+  align-items: flex-end;  /* Alinea el ícono verticalmente */
   color: #0290ff;
 }
 
@@ -120,6 +120,7 @@ body {
 .form-content {
   display: flex;
   justify-content: space-between;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
   width: 100%;
 }
 
@@ -139,7 +140,7 @@ form {
 }
 
 .form-title {
-  font-size: 1rem; /* Ajusta el tamaño de fuente como prefieras */
+  font-size: 1.3rem; /* Ajusta el tamaño de fuente como prefieras */
   font-weight: bold; /* Si quieres que sea negrita */
   margin-bottom: 1rem; /* Añade un espacio debajo del título */
   text-align: left; /* Centra el texto */
@@ -168,7 +169,7 @@ form {
   background-color: #0290ff;
   border: none;
   color: white;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
 }
 
 .book-card {
