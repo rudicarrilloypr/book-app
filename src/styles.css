@@ -25,6 +25,23 @@ body {
   box-sizing: border-box;
 }
 
+.navbar-content {
+  display: flex;
+  align-items: center;  /* Alinea los elementos verticalmente */
+}
+
+.navbar-icon {
+  display: flex;
+  align-items: center;  /* Alinea el ícono verticalmente */
+  color: #0290ff;
+}
+
+.navbar-icon .MuiSvgIcon-root {  /* Afecta solo a los íconos dentro de .navbar-icon */
+  border: 0.5px solid rgba(2, 144, 255, 0.3); /* Ajusta el color del borde según sea necesario */
+  border-radius: 50%;  /* Hace que el borde sea redondo */
+  padding: 5px;  /* Ajusta el espaciado entre el ícono y el borde según sea necesario */
+}
+
 .books {
   width: 3.688rem;
   height: 1rem;
