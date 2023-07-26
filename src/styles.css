@@ -8,7 +8,7 @@ body {
   justify-content: flex-start;
   width: 100%;
   height: 5.938rem;
-  margin: 0 0 2.375rem;
+  margin: 0 0 2.375rem 0;
   padding: 1.438rem 0 1.688rem 6.25rem;
   background-color: var(--white-two);
   box-sizing: border-box;
@@ -28,8 +28,8 @@ body {
 
 .navbar-icon .MuiSvgIcon-root {  /* Afecta solo a los íconos dentro de .navbar-icon */
   border: 0.5px solid rgba(2, 144, 255, 0.3); /* Ajusta el color del borde según sea necesario */
-  border-radius: 50%;  /* Hace que el borde sea redondo */
-  padding: 5px;  /* Ajusta el espaciado entre el ícono y el borde según sea necesario */
+  border-radius: 100%;  /* Hace que el borde sea redondo */
+  padding: 8px;  /* Ajusta el espaciado entre el ícono y el borde según sea necesario */
 }
 
 .books {
@@ -64,16 +64,6 @@ body {
   line-height: normal;
   letter-spacing: 1.9px;
   color: #121212;
-}
-
-.homepage-container {
-  width: 100%;
-  height: 68.563rem;
-  margin: 0 2.5rem 4.063rem 0;
-  padding: 0 0 49.625rem;
-  border-radius: 4px;
-  box-shadow: 0 0 60px 0 var(--black-5);
-  background-color: var(--white);
 }
 
 .Bookstore-CMS {
@@ -120,7 +110,7 @@ body {
 .form-content {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  padding: 2rem 0 1.625rem 1.688rem;
   width: 100%;
 }
 
@@ -133,6 +123,7 @@ body {
   border: solid 1px #e8e8e8;
   background-color: #fff;
   text-align: left;
+  margin-left: -0.5rem;
 }
 
 form {
@@ -143,6 +134,7 @@ form {
   font-size: 1.3rem; /* Ajusta el tamaño de fuente como prefieras */
   font-weight: bold; /* Si quieres que sea negrita */
   margin-bottom: 1rem; /* Añade un espacio debajo del título */
+  margin-left: 0.3rem;
   text-align: left; /* Centra el texto */
   color: #888; /* El color del texto */
   width: 100%;
@@ -157,7 +149,7 @@ form {
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
-  color: lightgray;
+  margin-right: 1.5rem;
 }
 
 .form-submit-button {
@@ -173,10 +165,11 @@ form {
 }
 
 .book-card {
+  display: flex;
+  flex-direction: column;
   width: 92%;
   height: 10.625rem;
   margin: 2.313rem auto 0;
-  align-items: center; /* Alinear verticalmente los elementos */
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   border-radius: 4px;
   border: solid 1px var(--white-three);
@@ -184,12 +177,46 @@ form {
   box-sizing: border-box;
 }
 
+.book-category-label {
+  font-size: small;
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+.book-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-actions {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  margin-top: -18px;
+  margin-left: -10px;
+  margin-right: 90px;
+}
+
+.book-progress {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  width: 50rem;
+  flex-direction: column;
+  margin: -6.9rem 0 15rem 0;
+}
+
 .book-title-label {
   width: 12.313rem;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
   margin-bottom: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'RobotoSlab-bold', sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -202,9 +229,9 @@ form {
 .book-author-label {
   width: 6.688rem;
   height: 1.813rem;
-  margin: 0.188rem 20.188rem 0 0;
+  margin: -0.388rem 20.188rem 0 0;
   margin-bottom: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'RobotoSlab-light', sans-serif;
   font-size: 0.975rem;
   font-weight: bold;
   font-stretch: normal;
@@ -219,18 +246,19 @@ form {
   width: 3.375rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'RobotoSlab-light', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   border: none; /* Agregado */
   background-color: transparent; /* Agregado */
-  transition: color 0.3s ease; /* Agregado */
+  transition: color 0.3s; /* Agregado */
 }
 
 .delete-button,
 .comments-button,
 .edit-button {
   margin-bottom: 500px;
+  font-family: 'RobotoSlab-light', sans-serif;
   border: none; /* Agregado */
   background-color: transparent; /* Agregado */
   color: #4386bf;
@@ -239,7 +267,7 @@ form {
 }
 
 .delete-button:hover {
-  color: #0290ff; /* Ajusta el color para obtener el efecto deseado */
+  color: #000; /* Ajusta el color para obtener el efecto deseado */
 }
 
 .navbar-container,
@@ -254,4 +282,67 @@ span {
   border: solid 1px var(--white-three);
   color: #888;
   opacity: 23%;
+}
+
+.current-chapter {
+  opacity: 0.5;
+  font-family: 'RobotoSlab-Light', sans-serif;
+  letter-spacing: normal;
+}
+
+.current-chapter-number {
+  opacity: 100%;
+  font-family: 'RobotoSlab-light', sans-serif;
+  position: relative;
+  bottom: -9%;
+}
+
+.current-chapter,
+.current-chapter-number {
+  text-align: left;
+  color: #888;
+  margin: 0;
+  flex: 2;
+}
+
+.progress-button {
+  flex: 3;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+  height: 2.063rem;
+  width: 65%;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 2.3rem 19.2rem 2.6rem 0.1rem;
+}
+
+.progress-bar-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  margin: 3rem 35.8rem 3.37rem  7.9rem;
+}
+
+.current-porcentage-number {
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* Adjust as needed */
+  margin: 0.1rem -20.2rem -2rem 2.9rem;
+}
+
+.current-chapter-container {
+  text-align: center;
+  margin: -8.5rem 12rem -1.4rem 50rem;
+  width: 45%;
+}
+
+.current-completed {
+  font-size: 10px;
+  margin: 0.1rem -10.2rem -3.4rem 14.7rem;
+  opacity: 50%;
 }
