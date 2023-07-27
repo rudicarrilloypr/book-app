@@ -16,6 +16,7 @@
 - [🛠 Built With ](#-built-with-)
    - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+- [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -34,10 +35,11 @@
 
 # 📖  Bookstore App <a name="about-project"></a>
 
-**Bookstore App** web app where you can display a list of books, and also, add and remove selected books
+**Bookstore App** web app where you can display a list of books, and also, add and remove them...
 
 ## 🛠 Built With <a name="built-with"></a>
 - React APP
+- Redux
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
@@ -65,11 +67,18 @@
 
 ### Key Features <a name="key-features"></a>
 - [X] **Use of React to setup de project.**
-- [X] **Recieve API quotes into Quote section.**
+- [X] **Send and recieve API Books.**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+[Click here](https://book-store-byrudi.netlify.app/) to see the project's deployment.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -132,7 +141,7 @@ To run tests, run the following command:
 <!--- Future Features ---->
 
 ## <a href="#future-features"></a>🔮 Future Features
-- style updates
+- mobile and tablet style version 
 - tests
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
