@@ -29,10 +29,13 @@ const HomePage = () => {
   };
 
   return (
-    <div>
-      <h1>Home Page</h1>
-      <NewBookForm onSubmit={handleAddBook} />
-      <BookList books={books} onDelete={handleDeleteBook} />
+    <div className="homepage-container">
+      <div className="booklist-container">
+        <BookList books={books} onDelete={handleDeleteBook} />
+      </div>
+      <div className="form-container">
+        <NewBookForm onSubmit={handleAddBook} />
+      </div>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+// En NewBookForm.js
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -25,11 +26,16 @@ const NewBookForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Tittle" value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
-      <button type="submit">Add Book</button>
-    </form>
+    <div className="form-container">
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <div className="form-content">
+        <form onSubmit={handleSubmit}>
+          <input className="form-input-title" type="text" placeholder="Book title" value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input className="form-input-author" type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+          <button className="form-submit-button" type="submit">ADD BOOK</button>
+        </form>
+      </div>
+    </div>
   );
 };
 
